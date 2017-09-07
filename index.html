@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
+    
     <body>
         
 
@@ -31,7 +32,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <img src="img/courseralogo.png" class="logo">    
+                    <img src="img/courseralogo.png" alt="Coursera" class="logo">    
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +57,7 @@
                         <li>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="button1">
-                            Sign-In
+                            Sign-Up
                             </button>        
 
                             <!-- Modal -->
@@ -65,25 +66,24 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+                                            <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
                                         </div>
                                         
                                         <div class="modal-body">
-                                            <form>
+                                            <form method="post" action="mailto:it@coursera.com" name="ContactForm" onsubmit="return ValidateContactForm();">
+                                                <div class="form-group">
+                                                    <label for="exampleName">Name</label>
+                                                    <input type="Name" class="form-control" id="exampleInputEmail1" placeholder="Full Name" name="Name">
+                                                </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Password</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                                                 </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Remember me
-                                                    </label>
-                                                </div>
-                                                <button type="submit" class="btn btn-default">Submit</button>
+                                                <button type="submit" class="btn btn-primary">Sign-Up</button>
                                             </form>
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@
 
 
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="button2">
-                            Sign-Up <span class="caret"></span>
+                            Sign-In <span class="caret"></span>
                         </button>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Facebook</a></li>
@@ -158,7 +158,6 @@
                     <div class="panel panel-primary pop_course">
                         <div class="panel-heading">
                             <div class="panel-title">
-                                <!-- <h3 class="heading">Introduction to Markets</h3> -->
                                 Introduction to Financial Markets
                             </div>
                         </div>
@@ -172,7 +171,6 @@
                         <div class="panel panel-primary pop_course">
                             <div class="panel-heading">
                                 <div class="panel-title">
-                                    <!-- <h3 class="heading">Introduction to Analytics</h3> -->
                                     Introduction to Analytics
                                 </div>
                             </div>
@@ -187,7 +185,6 @@
                         <div class="panel panel-primary pop_course">
                             <div class="panel-heading">
                                 <div class="panel-title">
-                                    <!-- <h3 class="heading">Full Stack Programming</h3> -->
                                     Full Stack Programming
                                 </div>
                             </div>
@@ -199,46 +196,6 @@
                 </div>    
             </div>
         </div>
-
-        <!-- <div  class="container">
-            <h3 id="panel_header">Most Popular Courses</h3>
-            <br>
-            <div class="row">
-                <div class="col-xs-4">
-                    <div class="panel panel-primary pop_course">
-                        <div class="panel-heading">
-                            <h4>Introduction to Markets</h4>
-                        </div>
-                        <div class="panel-body">
-                            <img class="img-responsive" style="width: 100%; height: 241px" src="img/market.jpg" class="panel_image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="panel panel-primary pop_course">
-                        <div class="panel-heading">
-                            <h4 id="heading2">Introduction to Data</h4>
-                        </div>
-                        <div class="panel-body">
-                            <img class="img-responsive" style="width: 100%; height: 241px" src="img/data.jpg" class="panel_image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="panel panel-primary pop_course">
-                        <div class="panel-heading">
-                            <h4>Full Stack Programming</h4>
-                        </div>
-                        <div class="panel-body">
-                            <img class="img-responsive" style="width: 100%; height: 241px" src="img/program.jpeg" class="panel_image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-            
-            
-            
 
         <div class="container">
             <div class="col-sm-6">
@@ -264,7 +221,7 @@
                 <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header col-sm-2">
-                        <img src="img/courseralogo.png" class="logo">    
+                        <img src="img/courseralogo.png" alt="Coursera" class="logo">    
                     </div>
 
                     <div class="col-sm-3 col-sm-offset-1">
@@ -318,6 +275,7 @@
         <!--Custom JS-->
         <script src="js/main.js"></script>
 
+       
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
